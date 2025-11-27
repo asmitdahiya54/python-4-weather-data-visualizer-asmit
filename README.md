@@ -1,123 +1,193 @@
-# Weather Data Visualizer - Asmit
+🌦️ Weather Data Visualizer — Delhi Climate Analysis
+B.Tech CSE (Cybersecurity) — Data Analysis Lab Assignment
+Author: Asmit
+📌 Project Overview
 
-## Assignment Overview
-This project is a mini assignment for the course **Programming for Problem Solving using Python**.  
-The goal is to analyze and visualize **daily weather data of Delhi** to understand climate patterns and trends over 5 years.
+This project analyzes 5 years of Daily Delhi Climate data using Pandas, NumPy, and Matplotlib.
+It demonstrates skills in:
 
----
+Data acquisition
 
-## Dataset
-- **Source:** Daily Delhi Climate dataset (CSV format)  
-- **Columns:**
-  - `date` – Date of observation
-  - `meantemp` – Mean daily temperature (°C)
-  - `humidity` – Mean daily humidity (%)
-  - `wind_speed` – Average wind speed (km/h)
-  - `meanpressure` – Mean daily pressure (hPa)
-- **Cleaned Dataset:** `data/Cleaned_DailyDelhiClimate.csv`  
+Cleaning and preprocessing
 
----
+Statistical analysis
 
-## Tools Used
-- Python 3  
-- Jupyter Notebook  
-- Libraries: Pandas, NumPy, Matplotlib, Seaborn  
+Grouping and aggregation
 
----
+Data visualization
 
-## Project Structure
-weather-data-visualizer-Asmit/
+Storytelling using markdown
+
+Exporting cleaned datasets and charts
+
+The goal is to understand temperature, humidity, wind speed, and pressure trends.
+
+📂 Folder Structure
+weather-data-visualizer-Aryan/
 │
-├─ data/
-│ ├─ DailyDelhiClimateTrain.csv
-│ └─ Cleaned_DailyDelhiClimate.csv
+├── README.md
+├── data/
+│   ├── DailyDelhiClimateTrain.csv
+│   └── Cleaned_DailyDelhiClimate.csv
 │
-├─ images/
-│ ├─ Daily_Temperature.png
-│ ├─ Humidity_vs_Temperature.png
-│ ├─ Monthly_Temperature.png
-│ └─ Temp_Humidity_Combined.png
+├── images/
+│   ├── Daily_Temperature.png
+│   ├── Humidity_vs_Temperature.png
+│   ├── Monthly_Temperature.png
+│   └── Temp_Humidity_Combined.png
 │
-├─ notebook/
-│ └─ Weather_Analysis.ipynb
+├── notebook/
+│   └── Weather_Analysis.ipynb
 │
-└─ report/
-└─ Summary.md 
+└── report/
+    └── summary.md 
+	📘 Assignment Tasks
+	
+✅ Task 1: Data Acquisition & Loading
 
+Dataset downloaded from Kaggle.
 
----
+Loaded using Pandas.
 
-## Analysis & Visualizations
-1. **Daily Mean Temperature** – Line chart showing temperature trends over 5 years.  
-2. **Humidity vs Temperature** – Scatter plot to explore correlation between humidity and temperature.  
-3. **Average Monthly Temperature** – Bar chart displaying seasonal variations.  
-4. **Temperature & Humidity Combined** – Line chart showing relationship between temperature and humidity over time.  
+Inspected using:
 
----
+df.head()
 
-## Insights
-- Temperature rises during summer months and falls during winter.  
-- Humidity has some correlation with temperature trends.  
-- Seasonal patterns are evident in monthly average temperature.  
-- Wind speed and pressure show minor fluctuations without strong seasonal patterns.  
+df.info()
 
----
+df.describe()
 
-## How to Run
-1. Open `notebook/Weather_Analysis.ipynb` in Jupyter Notebook.  
-2. Run cells **in order** from top to bottom to load data, clean, analyze, and visualize.  
-3. All cleaned data and plot images are saved in the respective folders (`data/` and `images/`).  
+✅ Task 2: Data Cleaning & Preprocessing
 
----
-📊 NumPy Statistical Analysis
+Converted date column to datetime.
 
-This project uses NumPy to compute statistical measures for understanding weather trends across months and years. After grouping the dataset by month, the following key statistics were calculated:
+Removed/handled missing values.
 
-✔ Mean Temperature
+Selected relevant columns:
 
-Shows the average temperature for each month, helping identify warm and cold periods.
+Temperature
 
-✔ Minimum & Maximum Temperature
+Humidity
 
-Provides the temperature range, showing seasonal extremes.
+Wind Speed
 
-✔ Standard Deviation
+Pressure
 
-Indicates how much temperature fluctuates within each month.
-Higher standard deviation = more variation in daily temperature.
+Cleaned data exported as:
+data/Cleaned_DailyDelhiClimate.csv
 
-Sample Output (Monthly Temperature Statistics)
-	mean	min	max	std
-2013-01	12.07	6.00	16.50	3.06
-2013-02	16.86	13.66	20.80	1.84
-2013-03	22.81	17.33	29.16	2.62
-2013-04	28.89	24.60	32.12	2.11
-2013-05	33.77	28.57	38.71	2.57
-...
-2016-12	17.67	14.00	21.20	1.79
-2017-01	10.00	10.00	10.00	0.00
-Insights from NumPy Analysis
+📊 Task 3: NumPy Statistical Analysis
 
-Temperature consistently increases from January → June, showing pre-monsoon warming.
+Statistical computations done using NumPy after grouping by month:
 
-May & June have the highest mean temperatures.
+Mean temperature
 
-January & December are the coldest months.
+Minimum temperature
 
-Months like April, May, June show higher standard deviation, meaning highly varying temperatures.
+Maximum temperature
 
-Some months (e.g., Jan 2017) show very low variation.
+Standard deviation
 
-🧮 NumPy Functions Used
+✔ Sample Output (Monthly Statistical Summary)
+Metric	Description
+mean	Average monthly temperature
+min	Lowest temperature recorded in the month
+max	Highest temperature recorded
+std	Monthly temperature variation
 
-np.mean()
+Insights from NumPy analysis:
 
-np.min()
+Summer months (May–June) show highest mean temperatures (33–35°C).
 
-np.max()
+Winter months (Dec–Jan) show lowest mean temperatures (10–15°C).
 
-np.std()
+Standard deviation is high in transitional seasons (Mar–Apr), showing unstable weather.
 
-Combined with Pandas groupby() for monthly aggregation.
+Temperature follows a clear seasonal cycle every year.
 
-ASMIT
+📈 Task 4: Visualizations (Matplotlib)
+
+All charts saved in the images/ folder.
+
+📌 1. Daily Mean Temperature
+
+images/Daily_Temperature.png
+Shows long-term warming/cooling trend across years.
+
+📌 2. Humidity vs Temperature (Scatter Plot)
+
+images/Humidity_vs_Temperature.png
+Shows the relationship:
+
+Lower temperatures → higher humidity
+
+Hot days → lower humidity
+
+📌 3. Monthly Average Temperature
+
+images/Monthly_Temperature.png
+Shows clear seasonal pattern:
+
+Peaks in May–June
+
+Drops sharply in December–January
+
+📌 4. Combined Plot (Temp + Humidity)
+
+images/Temp_Humidity_Combined.png
+Overlay of temperature and humidity trends.
+
+📆 Task 5: Grouping & Aggregation
+
+Using Pandas groupby + resample:
+
+Grouped by month → mean temperature
+
+Calculated monthly statistics
+
+Time-series resampling for smoothing
+
+📤 Task 6: Export & Storytelling
+
+Cleaned dataset saved as CSV.
+
+All plots saved as PNG.
+
+Final summary included in notebook as Markdown.
+
+Repository organized professionally.
+
+📝 Summary of Findings
+
+Temperature displays strong seasonal behavior (hot summers, cold winters).
+
+Humidity inversely relates to temperature.
+
+Pressure and wind speed remain relatively stable.
+
+NumPy statistical analysis confirms clear yearly climate cycles.
+
+Delhi summers show extreme high temperatures with low humidity.
+
+🛠️ Technologies Used
+
+Python
+
+NumPy
+
+Pandas
+
+Matplotlib
+
+Jupyter Notebook
+
+📌 How to Run the Project
+
+Clone the repository
+
+Open notebook/Weather_Analysis.ipynb
+
+Run all cells
+
+View generated images in the images/ folder
+
