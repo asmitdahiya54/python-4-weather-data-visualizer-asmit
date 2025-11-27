@@ -69,5 +69,55 @@ weather-data-visualizer-Asmit/
 3. All cleaned data and plot images are saved in the respective folders (`data/` and `images/`).  
 
 ---
+📊 NumPy Statistical Analysis
+
+This project uses NumPy to compute statistical measures for understanding weather trends across months and years. After grouping the dataset by month, the following key statistics were calculated:
+
+✔ Mean Temperature
+
+Shows the average temperature for each month, helping identify warm and cold periods.
+
+✔ Minimum & Maximum Temperature
+
+Provides the temperature range, showing seasonal extremes.
+
+✔ Standard Deviation
+
+Indicates how much temperature fluctuates within each month.
+Higher standard deviation = more variation in daily temperature.
+
+Sample Output (Monthly Temperature Statistics)
+	mean	min	max	std
+2013-01	12.07	6.00	16.50	3.06
+2013-02	16.86	13.66	20.80	1.84
+2013-03	22.81	17.33	29.16	2.62
+2013-04	28.89	24.60	32.12	2.11
+2013-05	33.77	28.57	38.71	2.57
+...
+2016-12	17.67	14.00	21.20	1.79
+2017-01	10.00	10.00	10.00	0.00
+Insights from NumPy Analysis
+
+Temperature consistently increases from January → June, showing pre-monsoon warming.
+
+May & June have the highest mean temperatures.
+
+January & December are the coldest months.
+
+Months like April, May, June show higher standard deviation, meaning highly varying temperatures.
+
+Some months (e.g., Jan 2017) show very low variation.
+
+🧮 NumPy Functions Used
+
+np.mean()
+
+np.min()
+
+np.max()
+
+np.std()
+
+Combined with Pandas groupby() for monthly aggregation.
 
 ASMIT
