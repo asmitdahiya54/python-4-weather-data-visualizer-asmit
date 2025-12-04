@@ -3,7 +3,7 @@ B.Tech CSE (Cybersecurity) — Data Analysis Lab Assignment
 Author: Asmit
 📌 Project Overview
 
-This project analyzes 5 years of Daily Delhi Climate data using Pandas, NumPy, and Matplotlib.
+This project analyzes 5 years of Daily Delhi Climate data using Pandas, NumPy.
 It demonstrates skills in:
 
 Data acquisition
@@ -190,4 +190,5 @@ Open notebook/Weather_Analysis.ipynb
 Run all cells
 
 View generated images in the images/ folder
+
 
