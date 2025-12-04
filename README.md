@@ -23,7 +23,7 @@ Exporting cleaned datasets and charts
 The goal is to understand temperature, humidity, wind speed, and pressure trends.
 
 📂 Folder Structure
-weather-data-visualizer-Aryan/
+weather-data-visualizer-Asmit/
 │
 ├── README.md
 ├── data/
