@@ -111,7 +111,7 @@ All charts saved in the images/ folder.
 
 📌 1. Daily Mean Temperature
 
-images/Daily_Temperature.png
+images/
 Shows long-term warming/cooling trend across years.
 
 📌 2. Humidity vs Temperature (Scatter Plot)
@@ -190,5 +190,6 @@ Open notebook/Weather_Analysis.ipynb
 Run all cells
 
 View generated images in the images/ folder
+
 
 
