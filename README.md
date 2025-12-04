@@ -109,33 +109,17 @@ Temperature follows a clear seasonal cycle every year.
 
 All charts saved in the images/ folder.
 
-📌 1. Daily Mean Temperature
+## 📈 Daily Mean Temperature
+![Daily Temperature](./images/Daily_Temperature.png)
 
-images/
-Shows long-term warming/cooling trend across years.
+## 🌡️ Humidity vs Temperature
+![Humidity vs Temperature](./images/Humidity_vs_Temperature.png)
 
-📌 2. Humidity vs Temperature (Scatter Plot)
+## 📅 Monthly Average Temperature
+![Monthly Temperature](./images/Monthly_Temperature.png)
 
-images/Humidity_vs_Temperature.png
-Shows the relationship:
-
-Lower temperatures → higher humidity
-
-Hot days → lower humidity
-
-📌 3. Monthly Average Temperature
-
-images/Monthly_Temperature.png
-Shows clear seasonal pattern:
-
-Peaks in May–June
-
-Drops sharply in December–January
-
-📌 4. Combined Plot (Temp + Humidity)
-
-images/Temp_Humidity_Combined.png
-Overlay of temperature and humidity trends.
+## 🔄 Combined Temperature + Humidity Plot
+![Combined Plot](./images/Temp_Humidity_Combined.png)
 
 📆 Task 5: Grouping & Aggregation
 
@@ -190,6 +174,7 @@ Open notebook/Weather_Analysis.ipynb
 Run all cells
 
 View generated images in the images/ folder
+
 
 
 
